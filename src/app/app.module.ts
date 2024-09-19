@@ -8,20 +8,31 @@ import { EnterCodeComponent } from './pages/enter-code/enter-code.component';
 import { StartComponent } from './pages/start/start.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Angular Material
 import { MatCardModule } from '@angular/material/card'
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon'
+import { MatButtonModule } from '@angular/material/button'
+import { ReactiveFormsModule } from '@angular/forms';
+import { BuilderDetailsComponent } from './pages/builder-details/builder-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EnterPasswordComponent,
     EnterCodeComponent,
-    StartComponent
+    StartComponent,
+    BuilderDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

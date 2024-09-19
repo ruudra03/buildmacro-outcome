@@ -1,0 +1,16 @@
+<div class="builder-details app-page">
+  <form [formGroup]="builderDetailsForm" (ngSubmit)="submitDetails()" class="builder-details-form">
+    <div class="form-content">
+      <input type="text" placeholder="Name*" formControlName="builder_name" class="form-input">
+      <input type="text" placeholder="Mobile" formControlName="mobile" class="form-input">
+      <input type="text" placeholder="Email*" formControlName="email" class="form-input">
+      <input type="text" placeholder="Company name*" formControlName="company_name" class="form-input">
+      <span *ngIf="error" class="form-error">
+        {{errMsg}}
+      </span>
+    </div>
+    <div class="form-footer">
+      <button mat-button type="submit">Submit</button>
+    </div>
+  </form>
+</div>

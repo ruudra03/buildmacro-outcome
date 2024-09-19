@@ -1,7 +1,11 @@
-.enter-password-form {
+.builder-details {
+
+}
+
+.builder-details-form {
   display: flex;
-  align-items: center;
   flex-flow: column nowrap;
+  align-items: center;
   gap: 2rem;
 }
 

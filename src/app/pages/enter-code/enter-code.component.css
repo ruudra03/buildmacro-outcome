@@ -1,0 +1,12 @@
+.enter-code-form {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 2rem;
+}
+
+.form-content {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
