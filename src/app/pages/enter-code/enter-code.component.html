@@ -1,13 +1,15 @@
 <div class="enter-code app-page">
   <form [formGroup]="enterCodeForm" (ngSubmit)="submitCode()" class="enter-code-form">
     <div class="form-content">
-      <input type="password" placeholder="Code" formControlName="code">
+      <input type="password" placeholder="Enter Builder Code" formControlName="code">
       <span *ngIf="error" class="form-error">
-        {{errMsg}}
+        {{ errMsg }}
       </span>
     </div>
     <div class="form-footer">
       <button mat-button type="submit">Submit</button>
+      <!-- New Button for Navigation to Enter Password Component -->
+      <button mat-button type="button" (click)="goToEnterPassword()">Login</button>
     </div>
   </form>
 </div>
