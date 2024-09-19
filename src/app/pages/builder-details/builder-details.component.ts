@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { BuilderDetail } from './BuilderDetail';
-import { BuilderCodes } from './BuilderCodes';
+import { BuilderDetail } from '../../models/BuilderDetail';
+import { BuilderCodes, IBuilderCode } from '../../models/BuilderCodes';
 import { Router } from '@angular/router';
 
 @Component({
@@ -83,18 +83,18 @@ export class BuilderDetailsComponent implements OnInit {
     }
   }
 
-  private generateCode(): string {
+  private generateCode(): IBuilderCode {
     console.log('[DEV LOG] generating code...');
     let code = Math.floor((Math.random() * 100000) + 1).toString()
 
-    while (this.builderCodes?.checkGeneratedCode(code)) {
+    while (this.builderCodes?.checkGeneratedCode(<IBuilderCode><unknown>(code))) {
       console.log('[DEV LOG] generating another code...');
       code = Math.floor((Math.random() * 100000) + 1).toString()
     }
 
-    this.builderCodes?.addUsedCode(code)
+    this.builderCodes?.addUsedCode(<IBuilderCode><unknown>(code))
     console.log('[DEV LOG] code generated...', code);
-    return code
+    return <IBuilderCode><unknown>(code)
   }
 
 }

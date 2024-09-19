@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button'
 import { ReactiveFormsModule } from '@angular/forms';
 import { BuilderDetailsComponent } from './pages/builder-details/builder-details.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BuilderDetailsComponent } from './pages/builder-details/builder-details
     BuilderDetailsComponent
   ],
   imports: [
+    CoreModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
