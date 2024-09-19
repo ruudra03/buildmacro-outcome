@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { EnterPasswordComponent } from './pages/enter-password/enter-password.component';
 import { EnterCodeComponent } from './pages/enter-code/enter-code.component';
 import { StartComponent } from './pages/start/start.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { StartComponent } from './pages/start/start.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
