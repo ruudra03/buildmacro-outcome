@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "npx ng serve",
     "g-component": "npx ng generate component",
+    "g-module": "npx ng generate module",
     "add-pkg": "npx ng add"
   },
   "private": true,

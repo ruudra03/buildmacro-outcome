@@ -47,3 +47,5 @@ Thumbs.db
 
 
 # Ignore code files here
+FirestoreKey.ts
+Passwords.ts
